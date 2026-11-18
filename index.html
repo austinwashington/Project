@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Red Bull vs. Celsius</title>
+  <title>Red Bull vs. Celsius — Home</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -12,7 +12,7 @@
     <div class="site-title">Red Bull vs. Celsius</div>
     <nav class="site-nav" aria-label="Main Navigation">
       <ul>
-        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html" class="active">Home</a></li>
         <li><a href="csr.html">CSR</a></li>
         <li><a href="people.html">People</a></li>
         <li><a href="products.html">Products</a></li>
@@ -22,18 +22,50 @@
   </header>
 
   <main class="main-content">
-    <div id="status-banner" class="status-banner" role="status" aria-live="polite">
-    </div>
+    <div id="status-banner" class="status-banner" role="status" aria-live="polite"></div>
 
-    <h1>Page Title</h1>
+    <h1>Red Bull vs. Celsius: Energy Drink Industry Showdown</h1>
 
+    <!-- Industry | Question | Audience Box -->
     <section class="page-blocks">
+      <div class="intro-box">
+        <h2>Project Overview</h2>
+        <p><strong>Industry:</strong> Energy Drinks and Soda — A fast-growing global beverage market where traditional high-sugar energy drinks compete directly with zero-sugar fitness and functional beverages.</p>
+        <p><strong>Our Question:</strong> How do Red Bull’s marketing claims, ingredients, and corporate track record stack up against Celsius’s fitness-focused branding and public records?</p>
+        <p><strong>Who This Site Is For:</strong> Everyday energy drink consumers, students, and athletes deciding which brand aligns best with their health goals and values.</p>
+      </div>
+
+      <!-- Two-Column Company Overview Cards -->
+      <div class="company-grid">
+        
+        <!-- Red Bull Card -->
+        <article class="company-card" id="company-redbull">
+          <img src="redbull-removebg-preview.png" alt="Red Bull energy drink can and logo" class="company-img" />
+          <h2>Red Bull GmbH</h2>
+          <p>Produces and markets energy drinks globally while organizing extreme sports events, media networks, and racing teams.</p>
+          <ul class="company-stats">
+            <li><strong>Founded:</strong> 1984 (drink launched in 1987)</li>
+            <li><strong>Headquarters:</strong> Fuschl am See, Salzburg, Austria</li>
+            <li><strong>Employees:</strong> 21,924 (end of 2025)</li>
+          </ul>
+        </article>
+
+        <!-- Celsius Card -->
+        <article class="company-card" id="company-celsius">
+          <img src="images-removebg-preview.png" alt="Celsius functional fitness energy drink can" class="company-img" />
+          <h2>Celsius Holdings, Inc.</h2>
+          <p>Develops and markets zero-sugar functional fitness and energy drinks containing caffeine, green tea extract, and vitamins.</p>
+          <ul class="company-stats">
+            <li><strong>Founded:</strong> 2004</li>
+            <li><strong>Headquarters:</strong> Boca Raton, Florida, USA</li>
+            <li><strong>Employees:</strong> 1,721 (as of May 2026)</li>
+          </ul>
+        </article>
+
+      </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <p>Team Info</p>
-  </footer>
-
-</body>
-</html>
+    <p>Hidden Genius Project | Fall 2026 — Red Bull vs. Celsius Team</p>
+    </footer>
