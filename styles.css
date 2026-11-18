@@ -1,0 +1,176 @@
+:root {
+  --glass-bg: rgba(255, 255, 255, 0.14);
+  --glass-bg-hover: rgba(255, 255, 255, 0.24);
+  --glass-border: rgba(255, 255, 255, 0.35);
+  --glass-highlight: rgba(255, 255, 255, 0.6);
+  --text-primary: #ffffff;
+  --text-secondary: rgba(255, 255, 255, 0.8);
+  --accent-redbull: #e11d48;
+  --accent-celsius: #f97316;
+  --blur-amount: 18px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: var(--text-primary);
+  background: 
+    radial-gradient(circle at 15% 20%, rgba(225, 29, 72, 0.45), transparent 40%),
+    radial-gradient(circle at 85% 25%, rgba(249, 115, 22, 0.45), transparent 40%),
+    radial-gradient(circle at 50% 85%, rgba(56, 189, 248, 0.35), transparent 50%),
+    linear-gradient(135deg, #090d16 0%, #111827 50%, #0b1120 100%);
+  background-attachment: fixed;
+  line-height: 1.6;
+}
+
+/* Reusable Liquid Glass Surface */
+.site-header,
+.status-banner,
+.page-blocks > *,
+.site-footer {
+  background: var(--glass-bg);
+  backdrop-filter: blur(var(--blur-amount)) saturate(160%);
+  -webkit-backdrop-filter: blur(var(--blur-amount)) saturate(160%);
+  border: 1px solid var(--glass-border);
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.35),
+    inset 0 1px 1px var(--glass-highlight);
+}
+
+
+.site-header {
+  position: sticky;
+  top: 1rem;
+  z-index: 100;
+  width: min(1150px, 92%);
+  margin: 1rem auto 0;
+  padding: 0.9rem 1.75rem;
+  border-radius: 999px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.site-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  background: linear-gradient(90deg, #fff, #cbd5e1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.site-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.site-nav a {
+  text-decoration: none;
+  color: var(--text-secondary);
+  font-weight: 500;
+  font-size: 0.95rem;
+  padding: 0.45rem 1rem;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  transition: all 0.25s ease;
+}
+
+.site-nav a:hover,
+.site-nav a.active {
+  color: var(--text-primary);
+  background: var(--glass-bg-hover);
+  border-color: var(--glass-border);
+  box-shadow: inset 0 1px 1px var(--glass-highlight);
+}
+
+.main-content {
+  flex: 1;
+  width: min(1150px, 92%);
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.status-banner {
+  padding: 0.85rem 1.25rem;
+  border-radius: 16px;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+.status-banner:empty {
+  display: none;
+}
+
+h1 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+
+.page-blocks {
+  display: grid;
+  gap: 1.5rem;
+}
+
+
+.page-blocks > * {
+  border-radius: 24px;
+  padding: 1.75rem;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.page-blocks > *:hover {
+  transform: translateY(-3px);
+  background: rgba(255, 255, 255, 0.18);
+}
+
+
+.site-footer {
+  width: min(1150px, 92%);
+  margin: 0 auto 1.5rem;
+  padding: 1.1rem 1.75rem;
+  border-radius: 20px;
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+
+@media (max-width: 680px) {
+  .site-header {
+    border-radius: 24px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .site-nav ul {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .site-nav a {
+    padding: 0.4rem 0.75rem;
+    font-size: 0.85rem;
+  }
+}
